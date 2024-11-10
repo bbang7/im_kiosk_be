@@ -56,7 +56,7 @@
 //                history.setCsnlStartDateTime(LocalDateTime.now().minusMinutes(random.nextInt(30)));
 //                history.setCsnlEndDateTime(history.getCsnlStartDateTime().plusMinutes(random.nextInt(30)));
 //                history.setCsnlTime((int) java.time.Duration.between(history.getCsnlStartDateTime(), history.getCsnlEndDateTime()).toMinutes());
-//                history.setWaitTime((int) java.time.Duration.between(history.getTicketStime(), history.getCsnlStartDateTime()).toMinutes());
+//                history.setWaitTime((int) java.time.Duration.between(history.getCsnlStartDateTime(), history.getTicketStime()).toMinutes());
 //            }
 //
 //            // 혼자 여부, 고객 연령대
