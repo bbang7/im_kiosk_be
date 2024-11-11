@@ -10,9 +10,6 @@ public record BaseResponse<T>(HttpStatusCode httpStatus, Boolean isSuccess, Stri
 
     /**
      * 필요값 : Http상태코드, 성공여부, 메시지, 에러코드, 결과값
-     * 1. Return 객체가 필요한 경우 -> 성공
-     * 2. Return 객체가 필요 없는 경우 -> 성공
-     * 3. 요청에 실패한 경우
      */
 
     /**

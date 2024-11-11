@@ -19,28 +19,6 @@ public class BaseExceptionHandler {
 
         return new ResponseEntity<>(response, response.httpStatus());
     }
-
-
-    /**
-     * security 인증 에러
-     * 아이디가 없거나 비밀번호가 틀린 경우 AuthenticationManager 에서 발생
-     *
-     * @return FAILED_TO_LOGIN 에러 response
-     */
-//    @ExceptionHandler(BadCredentialsException.class)
-//    protected ResponseEntity<BaseResponse<Void>> handleBadCredentialsException(BadCredentialsException e) {
-//        BaseResponse<Void> response = new BaseResponse<>(BaseResponseStatus.FAILED_TO_LOGIN);
-//        log.error("BadCredentialsException: ", e);
-//
-//        return new ResponseEntity<>(response, response.httpStatus());
-//    }
-//
-//    @ExceptionHandler(RuntimeException.class)
-//    protected ResponseEntity<BaseResponse<Void>> RuntimeError(RuntimeException e) {
-//        BaseResponse<Void> response = new BaseResponse<>(BaseResponseStatus.INTERNAL_SERVER_ERROR, e);
-//        log.error("RuntimeException: ", e);
-//
-//        return new ResponseEntity<>(response, response.httpStatus());
-//    }
+    
 
 }
