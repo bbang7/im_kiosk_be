@@ -26,12 +26,10 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     @Transactional
     public LoginResponseDto validateMember(LoginRequestDto loginRequestDto) {
-        // 사용자 조회
         Employee employee = employeeRepository.findByMemberCode(loginRequestDto.getId())
                 .orElseThrow(() -> new BaseException(BaseResponseStatus.NO_EXIST_USER));
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        // 입력한 비밀번호와 저장된 해시 비밀번호 비교
 
         if (!passwordEncoder.matches(loginRequestDto.getPassword(), employee.getPassword())) {
             throw new BaseException(BaseResponseStatus.FAILED_TO_LOGIN);
@@ -61,7 +59,6 @@ public class EmployeeServiceImpl implements EmployeeService{
         }
         employeeRepository.save(employee);
 
-        return;
     }
 
 }

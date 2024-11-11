@@ -38,7 +38,7 @@
 //
 //        List<String> wdNames = List.of("일반금융", "대출", "기타업무", "외환업무");
 //
-//        for (int i = 0; i < 10000; i++) {
+//        for (int i = 0; i < 20000; i++) {
 //            // memberCode와 memberName 매핑에서 임의로 선택
 //            String memberCode = memberMap.keySet().stream().toList().get(random.nextInt(memberMap.size()));
 //            String memberName = memberMap.get(memberCode);
@@ -47,7 +47,7 @@
 //            String wdName = wdNames.get(wdId - 1);
 //            boolean csnlState = random.nextBoolean();
 //
-//            LocalDateTime currentDateTime = generateRandomDateTime(LocalDate.now().minusYears(10), LocalDate.now());
+//            LocalDateTime currentDateTime = generateRandomDateTime(LocalDate.now().minusYears(1), LocalDate.now());
 //
 //            // 09:00 ~ 16:00 사이의 ticketStime 생성
 //            LocalDateTime ticketStime = generateRandomTimeInRange(currentDateTime, LocalTime.of(9, 0), LocalTime.of(16, 0));

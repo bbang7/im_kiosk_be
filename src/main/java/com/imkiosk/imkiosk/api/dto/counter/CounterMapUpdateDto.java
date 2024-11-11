@@ -6,8 +6,8 @@ import java.util.List;
 
 @Data
 public class CounterMapUpdateDto {
-    private Long wdMapId; // CounterMap ID
-    private Byte width;   // 새로운 너비
-    private Byte height;  // 새로운 높이
+    private Long wdMapId;
+    private Byte width;
+    private Byte height;
     private List<CounterMapItemUpdateDto> counterMapItemUpdateDtos;
 }

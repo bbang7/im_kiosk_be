@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Slf4j
 public class BaseExceptionHandler {
     /**
-     * 발생한 예외 처리
+     * 예외 발생한거 처리
      */
     @ExceptionHandler(BaseException.class)
     protected ResponseEntity<BaseResponse<Void>> BaseError(BaseException e) {

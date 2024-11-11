@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
 
-
+// jsql jpql 공부하기
     @Query("SELECT t FROM Ticket t JOIN t.counter c WHERE c.branch.deptId = :deptId AND t.counter.wdId = :wdId")
     List<Ticket> findByWdIdAndDeptId(@Param("deptId") Long deptId, @Param("wdId") Long wdId);
 

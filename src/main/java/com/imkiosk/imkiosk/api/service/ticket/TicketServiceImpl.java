@@ -23,7 +23,6 @@ public class TicketServiceImpl implements TicketService {
     @Override
     @Transactional
     public TicketResponseDto getTicketItems(Long deptId, Long wdId) {
-//        System.out.println(deptId+" "+wdId);
         List<Ticket> ticketItems = ticketRepository.findByWdIdAndDeptId(deptId, wdId);
         TicketResponseDto responseDto = TicketResponseDto.toDto(ticketItems);
 
@@ -42,8 +41,6 @@ public class TicketServiceImpl implements TicketService {
             Ticket ticket = ticketRepository.findById(ticketDto.getTicketId())
                     .orElseThrow(() -> new RuntimeException("Ticket not found: " + ticketDto.getTicketId())); // 예외 처리
 
-//            ticket.setItemCode(ticketDto.getItemCode());
-//            ticket.setItemName(ticketDto.getItemName());
             ticket.setContent(ticketDto.getContent());
             ticket.setItemIndex(ticketDto.getItemIndex());
             ticket.setIsPlaced(ticketDto.getIsPlaced());

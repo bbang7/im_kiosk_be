@@ -19,10 +19,10 @@ public class CounterResponseDto {
 
     public static CounterResponseDto toDto(List<Counter> counters) {
         if (counters.isEmpty()) {
-            return null; // 또는 빈 DTO 반환
+            return null;
         }
 
-        Counter firstCounter = counters.get(0); // 첫 번째 Counter의 정보를 사용
+        Counter firstCounter = counters.get(0); // 첫 번째 거 쓰면될듯?
 
         return CounterResponseDto.builder()
                 .deptId(firstCounter.getBranch() != null ? firstCounter.getBranch().getDeptId() : null)

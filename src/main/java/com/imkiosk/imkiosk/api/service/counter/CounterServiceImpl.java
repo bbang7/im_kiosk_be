@@ -34,24 +34,18 @@ public class CounterServiceImpl implements CounterService {
     @Override
     @Transactional
     public CounterResponseDto createCounter(CounterCreateDto counterCreateDto) {
-        // 부서 ID로 Branch 객체를 찾습니다.
         Branch branch = branchRepository.findById(counterCreateDto.getDeptId())
-                .orElseThrow(() -> new RuntimeException("Branch not found")); // 예외 처리
+                .orElseThrow(() -> new RuntimeException("Branch not found"));
 
-//        if (counterRepository.findByWdName(counterCreateDto.getWdName()).isPresent()) {
-//            throw new RuntimeException("Counter with the same wdName already exists"); // 중복 예외 처리
-//        }
         if (counterRepository.findByWdNameAndBranchDeptId(counterCreateDto.getWdName(), counterCreateDto.getDeptId()).isPresent()) {
             throw new RuntimeException("Counter with the same wdName already exists in this department"); // 중복 예외 처리
         }
 
-        // Counter 객체 생성
         Counter counter = new Counter();
         counter.setBranch(branch);
         counter.setWdName(counterCreateDto.getWdName());
         counter.setWdCount(counterCreateDto.getWdCount());
 
-        // Counter 저장
         counterRepository.save(counter);
 
         // 초기 인덱스를 설정해줘야할까?
@@ -64,7 +58,6 @@ public class CounterServiceImpl implements CounterService {
 
         kioskLayoutRepository.save(kioskLayout);
 
-        // 저장된 Counter를 기반으로 CounterResponseDto 생성
         return CounterResponseDto.toDto(Collections.singletonList(counter));
     }
 

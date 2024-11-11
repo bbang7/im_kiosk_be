@@ -12,8 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BranchCounterMapResponseDto {
-    private Long deptId; // 부서 ID
-    private List<CounterMapResponseDto> counterMaps; // 카운터 맵 목록
+    private Long deptId;
+    private List<CounterMapResponseDto> counterMaps;
 
     public static BranchCounterMapResponseDto toDto(Long deptId, List<CounterMapResponseDto> counterMaps) {
         return BranchCounterMapResponseDto.builder()

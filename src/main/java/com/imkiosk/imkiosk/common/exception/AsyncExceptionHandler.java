@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 @Slf4j
 public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
 
-    /** 비동기 작업에서 예외가 발생했을 때 처리 */
+    /** 비동기 예외 처리할 때 */
 
     @Override
     public void handleUncaughtException(Throwable ex, Method method, Object... params) {

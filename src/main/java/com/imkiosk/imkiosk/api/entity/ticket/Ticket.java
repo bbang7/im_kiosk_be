@@ -47,16 +47,5 @@ public class Ticket {
     @Column(name = "is_placed")
     private Boolean isPlaced = true;
 
-//    @Column(name = "ticket_number")
-//    private Long ticketNumber;
 
-//    @Enumerated(EnumType.ORDINAL)
-//    @Column(name = "state", nullable = false)
-//    private TicketState state = TicketState.WAIT;
-
-//    @Column(name = "ticket_stime")
-//    @Temporal(TemporalType.TIMESTAMP)
-//    private Date ticketStime;
-
-    // Getters and Setters
 }

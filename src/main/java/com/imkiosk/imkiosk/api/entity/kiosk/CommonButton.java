@@ -19,9 +19,6 @@ public class CommonButton {
     @JoinColumn(name = "dept_id", nullable = false)
     private Branch branch;
 
-//    @Enumerated(EnumType.ORDINAL) // 정수형으로 저장
-//    @Column(name = "type", nullable = false)
-//    private CommonButtonType type = CommonButtonType.UTIL; // 열거형으로 설정
 
 
 

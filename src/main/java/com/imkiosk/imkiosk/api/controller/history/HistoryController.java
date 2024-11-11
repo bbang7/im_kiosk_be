@@ -30,7 +30,7 @@ public class HistoryController {
 
         List<History> histories = historyService.getHistoriesByDeptAndDateRange(deptId, startDateTime, endDateTime);
 
-        return new BaseResponse<>(histories); // 일치하는 데이터가 없으면 빈 배열 반환
+        return new BaseResponse<>(histories);
     }
 
 }
